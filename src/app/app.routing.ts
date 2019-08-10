@@ -1,16 +1,13 @@
 import {Routes, RouterModule} from '@angular/router'
-import {AuthGuard} from './helpers/auth.guard'
 
 const appRoutes: Routes = [
     {
         path: '',
-        loadChildren: './modules/home/home.module#HomeModule',
-        canActivate: [AuthGuard]
+        loadChildren: './modules/home/home.module#HomeModule'
     },
     {
         path: 'rca',
-        loadChildren: './modules/student/student.module#StudentModule',
-        canActivate: [AuthGuard]
+        loadChildren: './modules/rca/rca.module#RcaModule'
     },
     {
         path: '**', redirectTo: ''
